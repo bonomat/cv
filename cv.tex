@@ -8,7 +8,7 @@
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 \usepackage{color}
 \usepackage{hyperref}
-\hypersetup{colorlinks,urlcolor=blue}
+\hypersetup{colorlinks,urlcolor=blue,unicode=True}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -57,16 +57,17 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-\textcolor{grey}{Full CV available at: \href{http://careers.stackoverflow.com/prokofyev}{careers.stackoverflow.com/prokofyev}}\\
 \maketitle
 
-{\large\textit{I love hacking on ideas and bringing them to fully working prototypes. I try to favor technologies that allow me to quickly test many ideas and select those ones that deserve a solid implementation.}}
+{\large\textit{Currently I am a PhD student in CS working in areas of natural language processing and semantic web.  I particularly enjoy open-ended and research-oriented problems and favor tools and technologies that allow me to tackle these problems most effectively, such as Python programming language.
+\\\\
+My interests also include textual data analytics and big data processing.}}
 \vspace{0.5cm}
 
 \section{Technical Skills}
 %\subsection{PhD thesis (summa cum laude)}
-\cvline{\textbf{Programming Languages}}{\emph{Python, Java}}
-\cvline{\textbf{Technologies}}{\emph{scikit-learn, nltk, hadoop, django, jquery, postgres, nginx, jenkins, scss, html5}}
+\cvline{\textbf{Programming Languages}}{\hspace{0.3cm}\emph{Python, Java}}
+\cvline{\textbf{Technologies}}{\hspace{0.3cm}\emph{scikit-learn, nltk, hadoop, django, jquery, postgres}}
 
 %\subsection{Master's thesis}
 %\cvline{title}{\emph{Navigational SQL, Extending SQL with Entity Navigation}}
@@ -74,10 +75,14 @@
 %\cvline{description}{\small Short thesis abstract}
 \section{Education}
 \cventry{Nov. 2011 -- Present}{PhD Student}{}{University of Fribourg}{}{
-\textbf{Keywords: }{\emph{knowledge extraction, word sense disambiguation, text classification, semantic web, ontology construction}}
-\\\\
-I'm a PhD student at the \href{http://exascale.info/}{eXascale Infolab} under the supervision of Professor \href{http://exascale.info/phil}{Philippe Cudré-Mauroux}.
-My research is focused on developing new methods that foster knowledge extraction from unstructured data as well as knowledge processing and discovery.
+Currently I'm a PhD student at the \href{http://exascale.info/}{eXascale Infolab}, under supervision of Professor \href{http://exascale.info/phil}{Philippe Cudré-Mauroux}.
+\\
+My research is focused on developing new methods that provide effective knowledge extraction from unstructured technical data, knowledge processing and discovery. In particular, I have worked on the following research problems:
+\begin{itemize}
+\item Tag recommendation for scientific papers based on the the ontology of scientific concepts and user's interest profile.
+\item Ontology-based word sense disambiguation for scientific literature.
+\item Named Entity Recognition for scientific literature.
+\end{itemize}
 }%
 \cventry{2007--2009}{M.Sc. Applied Mathematics and Physics}{Moscow Institute of Physics and Technology}{Moscow, Russia}{}{
 I did my Master's thesis on building enterprise network monitoring and management system based on open source software (\href{http://www.opennms.org}{OpenNMS}).
@@ -100,55 +105,41 @@ My GPA was 4.7 out of 5.
 
 \section{Experience}
 \cventry{Feb. 2010 -- Mar. 2011}{Python/Django Developer}{}{École Polytechnique Fédérale de Lausanne (EPFL)}{}{
-\textbf{Technologies: }{\emph{python, django, celery, selenium, jquery, git, memcached}}
+My general responsibilities were to maintain and develop new features for a scientific application running on the Python/Django platform (\href{http://sciencewise.info}{ScienceWISE.info}). The system is processing large amounts of scientific articles from the arxiv.org website on a daily basis. Every article is then linked with scientific concepts appearing in it using the manually-curated ScienceWISE Ontology. The links between articles and concepts are then used to provide a semantic search over the collections of articles.
 \\\\
-Maintain and develop new features for a web application running on Django/Python (\href{http://sciencewise.info}{ScienceWISE.info}).
-I started as an intern and continued as a developer and lead project developer afterwards.
-\\
+I have also implemented a number of sub-projects that expanded the functionality of the system, in particular:
 \begin{itemize}
-\item Developed web crawler and HTML parser for ontology extraction from online information sources
-\item Developing rich user interfaces using \emph{JavaScript} and \emph{jQuery}
-\item Introduced Continuous Integration system based on \href{http://jenkins-ci.org}{Jenkins CI}
+\item A full text search solution based on the Whoosh engine.
+\item A multi-purpose tool to extract taxonomies of scientific concepts from external resources, such as Wikipedia and other online encyclopaedias; and further integrate them to the ScienceWISE Ontology.
+\item An authentication system based on SWITCH AAI.
+\item A live LaTeX-editor for writing definitions of scientific concepts.
 \end{itemize}
 \vspace{0.3cm}
-The paper describing the project received \href{http://iswc2011.semanticweb.org/program/awards/}{best demo paper award} at ISWC 2011.
+The paper presenting the project received the \href{http://iswc2011.semanticweb.org/program/awards/}{best demo paper award} at International Semantic Web Conference 2011.
 }%
 \cventry{Dec. 2007 -- Jan. 2010}{Configuration Manager}{}{COS\&HT}{}{
-\textbf{Technologies: }{\emph{solaris, linux, confluence, jira, svn, opennms, python}}
-\\\\
-Maintain internal servers and network, implement new services.
+During my work at COS\&HT, my primary responsibilities included implementing various infrastructure projects for customers as well as maintenance of company's internal infrastructure solutions. The stack of solutions was primarily based on the enterprise products of Sun Microsystems, such as Sun Java Identity Manager, Sun Secure Global Desktop, etc.
+\\
+Noticeable customer projects:
 \begin{itemize}
-\item Implemented and maintained collaboration product infrastructure with single sign-on (project tracking system, enterprise wiki) based on \href{http://atlassian.com/}{Atlassian products}
-\item Implemented and maintained enterprise content management solution with \href{http://www.alfresco.com/}{Alfresco ECM} including LDAP/AD integration.
+\item Lead engineer in implementing Identity Management solution for Russian Federal Customs Service based on Sun Java Identity Manager.
+\item Engineer in implementing infrastructure solutions for Russian regional administrations providing governmental and municipal services.
 \end{itemize}
 }%
 \cventry{Jun. 2006 -- Nov. 2007}{Software Engineer}{}{NetCracker}{System Performance dept}{
-\textbf{Technologies: }{\emph{java, weblogic, jython}}
+Our department was dedicated to investigating and solving complex issues with unusually slow performance and memory leaks in J2EE applications. This work required performing lots of complex debugging and analysis of Java heapdumps.
 \\\\
-Troubleshooting and optimizing java applications performance.
-\\
-Our department was dedicated to investigating and solving complex issues with slow performance and memory leaks in J2EE applications. This work required performing lots of complex debugging and Java heapdump analysis.
-\\\\
-Designed, developed and implemented a \emph{Jyhton} application for automated Java Enterprise application deployment on \emph{WebLogic Application Server}.
+I have also implemented a \emph{Jython} application for automated deployment of J2EE applications on \emph{WebLogic Application Server}.
 }%
 
 \section{Additional Projects}
 \cventry{May 2012 -- Present}{FarPlano}{}{}{}{
-\textbf{Technologies: }{\emph{heroku, php, java, android}}
-\\
-Mobile app for public transportation in Switzerland.\\
+Android app for public transportation in Switzerland.\\
 \href{https://play.google.com/store/apps/details?id=com.schedulr}{play.google.com/store/apps/details?id=com.schedulr}
-\\
 }%
 \cventry{Sep. 2011 -- Present}{django-selenium}{\href{https://pypi.python.org/pypi/django-selenium/}{pypi.python.org/pypi/django-selenium}}{}{}{
-\textbf{Technologies: }{\emph{python, django, selenium, tox, travis-ci}}
-\\
 Selenium testing library integration for Django Framework.
 }%
-\section{Languages}
-\cvlanguage{Russian}{Native}{}
-\cvlanguage{English}{Fluent}{}
-\cvlanguage{French}{Basic}{}
 
 %\section{Patents}
 %\cvlistitem{Lifecycle Based Horizontal Partitioning (in application) - USP 221624, USP 333803}
@@ -159,6 +150,7 @@ Selenium testing library integration for Django Framework.
 
 
 % Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+\pagebreak
 \href{http://scholar.google.com/citations?user=GhGV4P8AAAAJ&hl=en}{Google Scholar Profile}
 \nocite{*}
 \bibliographystyle{plain}
